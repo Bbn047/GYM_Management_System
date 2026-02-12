@@ -1,0 +1,194 @@
+:root {
+    --primary-color: #3498db;
+    /* Blue for Admin */
+    --secondary-color: #e67e22;
+    /* Orange for Member */
+    --accent-color: #5dade2;
+    /* Light Blue for User */
+    --bg-color: rgba(0, 0, 0, 0.4);
+    --text-color: white;
+    --box-bg: rgba(255, 255, 255, 0.05);
+    --input-bg: rgba(0, 0, 0, 0.2);
+    --border-clr:#ffffff33;
+    --box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('/assets/images/gym-background.jpg.jfif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+.glass-container {
+    height: 80%;
+    background: var(--bg-color);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid var(--border-clr);
+    box-shadow: 0 8px 32px var(--box-shadow);
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Close Button Styles */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.close-btn:hover {
+    opacity: 1;
+    color: var(--accent-color); /* Uses orange accent for hover */
+}
+
+/* Ensure container is relative so absolute positioning works */
+.glass-container {
+    position: relative; /* Add this if not already there */
+    /* ... rest of your glass-container styles ... */
+}
+
+.page-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.login-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.login-box {
+    background: var(--box-bg);
+    border-radius: 10px;
+    padding: 15px;
+    height: 100%;
+    border: 2px solid var(--text-color);
+}
+
+.admin-box {
+    border-color: var(--primary-color);
+}
+
+.member-box {
+    border-color: var(--secondary-color);
+}
+
+.user-box {
+    border-color: var(--accent-color);
+}
+
+.icon {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+/* Color the icons to match their box theme */
+.admin-box .icon i {
+    color: var(--primary-color);
+}
+
+.member-box .icon i {
+    color: var(--secondary-color);
+}
+
+.user-box .icon i {
+    color: var(--accent-color);
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid #ffffff4d;
+    background: var(--input-bg);
+    color: var(--text-color);
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+}
+
+.admin-box button {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.member-box button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.user-box button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.footer-links {
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}

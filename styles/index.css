@@ -1,0 +1,152 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Navbar */
+.custom-nav {
+    background-color: #1a1a1a;
+    padding: 15px 50px;
+}
+
+.navbar-brand.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff6600 !important; /* Orange accent */
+    text-transform: uppercase;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    margin-right: 15px;
+}
+
+.nav-link.active {
+    color: #ff6600 !important;
+}
+
+.btn-outline-primary {
+    color: white !important;
+    border-color: white !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: white !important;
+    color: #1a1a1a !important;
+}
+
+.btn-primary {
+    background-color: #ff6600 !important;
+    border-color: #ff6600 !important;
+}
+
+.btn-primary:hover {
+    background-color: #e65c00 !important;
+    border-color: #e65c00 !important;
+}
+
+/* Hero Section */
+.hero {
+    /* To use an image, uncomment the line below and add your image path */
+    /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/gym-bg.jpg') no-repeat center center/cover; */
+    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); /* Fallback gradient */
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+.btn-action {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.btn-action:hover {
+    background-color: #e65c00;
+    color: white;
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #ff6600;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+}

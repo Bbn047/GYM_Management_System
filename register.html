@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Mr. Fit</title>
+    <link rel="stylesheet" href="styles/register.css">
+</head>
+
+<body>
+
+    <div class="glass-container">
+        <a href="index.html" class="close-btn"><i class="fas fa-times"></i></a>
+
+        <h1 class="page-title">REGISTER</h1>
+
+        <div class="register-box">
+            <form id="registerForm">
+                <input type="text" id="regUsername" placeholder="FULL NAME" required>
+                <input type="email" id="regEmail" placeholder="EMAIL" required>
+                <input type="password" id="regPassword" placeholder="PASSWORD" required>
+
+                <select id="regRole" required>
+                    <option value="" disabled selected>SELECT ACCOUNT TYPE</option>
+                    <option value="admin">Admin</option>
+                    <option value="member">Member</option>
+                    <option value="user">User</option>
+                </select>
+
+                <button type="submit">REGISTER</button>
+            </form>
+        </div>
+
+        <div class="footer-links">
+            <a href="login.html">Back to Login</a>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/firebase-config.js"></script>
+    <script type="module" src="scripts/register.js"></script>
+</body>
+
+</html>

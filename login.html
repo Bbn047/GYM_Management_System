@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Mr. Fit</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/login.css">
+</head>
+
+<body>
+
+    <div class="glass-container">
+        <a href="index.html" class="close-btn"><i class="fas fa-times"></i></a>
+
+        <h1 class="page-title">Mr. FIT</h1>
+
+        <div class="login-grid">
+            <div class="login-box admin-box">
+                <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>ADMIN</h3>
+                <form id="adminLoginForm">
+                    <input type="email" id="adminEmail" placeholder="EMAIL" required>
+                    <input type="password" id="adminPassword" placeholder="PASSWORD" required>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
+
+            <div class="login-box member-box">
+                <div class="icon"><i class="fas fa-dumbbell"></i></div>
+                <h3>MEMBER</h3>
+                <form id="memberLoginForm">
+                    <input type="email" id="memberEmail" placeholder="EMAIL" required>
+                    <input type="password" id="memberPassword" placeholder="PASSWORD" required>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
+
+            <div class="login-box user-box">
+                <div class="icon"><i class="fas fa-user"></i></div>
+                <h3>USER</h3>
+                <form id="userLoginForm">
+                    <input type="email" id="userEmail" placeholder="EMAIL" required>
+                    <input type="password" id="userPassword" placeholder="PASSWORD" required>
+                    <button type="submit">LOGIN</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Forget Password?</a>
+            <a href="register.html">Sign Up</a>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/firebase-config.js"></script>
+    <script type="module" src="scripts/login.js"></script>
+</body>
+
+</html>
