@@ -30,9 +30,9 @@
             <div class="login-box member-box">
                 <div class="icon"><i class="fas fa-dumbbell"></i></div>
                 <h3>MEMBER</h3>
-                <form id="memberLoginForm">
-                    <input type="email" id="memberEmail" placeholder="EMAIL" required>
-                    <input type="password" id="memberPassword" placeholder="PASSWORD" required>
+                <form id="trainerLoginForm">
+                    <input type="email" id="trainerEmail" placeholder="EMAIL" required>
+                    <input type="password" id="trainerPassword" placeholder="PASSWORD" required>
                     <button type="submit">LOGIN</button>
                 </form>
             </div>
@@ -54,8 +54,13 @@
         </div>
     </div>
 
-    <script type="module" src="scripts/firebase-config.js"></script>
-    <script type="module" src="scripts/login.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/login.js"></script>
 </body>
 
 </html>

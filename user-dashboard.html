@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - Mr. FIT</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar" id="sidebar">
+            <div class="logo">Mr. FIT</div>
+            <ul>
+                <li><a href="#" class="active" data-page="user-dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#" data-page="my-trainer"><i class="fas fa-user-tie"></i> My Trainer</a></li>
+                <li><a href="#" data-page="my-plan"><i class="fas fa-box"></i> My Plan</a></li>
+                <li><a href="#" data-page="fee-payment"><i class="fas fa-credit-card"></i> Pay Fees</a></li>
+                <li><a href="#" data-page="user-notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-wrapper" id="mainWrapper">
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="welcome-note">
+                        <h1>Welcome, <span class="header-user-name"></span> 👋</h1>
+                        <p>Mr. FIT Member Portal</p>
+                    </div>
+                </div>
+                <div class="user-profile-menu">
+                    <img src="assets/images/user-profile.jpg" alt="User" class="profile-photo">
+                    <span class="user-name"></span>
+                    <div class="dropdown">
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                        <div class="dropdown-content">
+                            <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="scrollable-content">
+                </main>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script type="module" src="./js/firebase-config.js"></script>
+    <script type="module" src="./js/user.js"></script>
+</body>
+</html>

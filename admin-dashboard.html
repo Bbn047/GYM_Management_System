@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Mr. FIT</title>
+    <link rel="stylesheet" href="styles/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <nav class="sidebar" id="sidebar">
+            <div class="logo">Mr. FIT</div>
+            <ul>
+                <li><a href="#" class="active" data-page="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                </li>
+                <li><a href="#" data-page="members"><i class="fas fa-users"></i> Members</a></li>
+                <li><a href="#" data-page="billing"><i class="fas fa-file-invoice-dollar"></i> Create Bills</a></li>
+                <li><a href="#" data-page="packages"><i class="fas fa-box-open"></i> Packages</a></li>
+                <li><a href="#" data-page="notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#" data-page="reports"><i class="fas fa-chart-line"></i> Reports</a></li>
+                <li><a href="#" data-page="store"><i class="fas fa-store"></i> Store</a></li>
+                <li><a href="#" data-page="diet"><i class="fas fa-utensils"></i> Diet Details</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-wrapper" id="mainWrapper">
+
+            <header class="top-header" id="topHeader">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="welcome-note">
+                        <h1>Welcome Back, Admin! 👋</h1>
+                        <p>Mr. FIT Management System</p>
+                    </div>
+                </div>
+
+                <div class="admin-profile">
+                    <img src="assets/images/admin-profile.jpg" alt="Admin" class="admin-photo">
+                    <span class="admin-name">Admin Name</span>
+                    <div class="dropdown">
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="scrollable-content">
+                <section class="stats-grid">
+                    <div class="stat-card gradient-1">
+                        <i class="fas fa-dumbbell icon"></i>
+                        <div class="data">
+                            <h3>Total Trainers</h3>
+                            <p class="stat-number"></p>
+                        </div>
+                    </div>
+                    <div class="stat-card gradient-2">
+                        <i class="fas fa-users icon"></i>
+                        <div class="data">
+                            <h3>Gym Users</h3>
+                            <p class="stat-number"></p>
+                        </div>
+                    </div>
+                    <div class="stat-card gradient-3">
+                        <i class="fas fa-money-bill-wave icon"></i>
+                        <div class="data">
+                            <h3>Pending Fees</h3>
+                            <p class="stat-number">₹ <span></span></p>
+                        </div>
+                    </div>
+                    <div class="stat-card gradient-4">
+                        <i class="fas fa-chart-line icon"></i>
+                        <div class="data">
+                            <h3>Monthly Income</h3>
+                            <p class="stat-number">₹85,000</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="details-grid">
+                    <div class="detail-card">
+                        <h2>Trainers Status</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>Name</td>
+                                    <td>Amount</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                           <tr>
+                            <tbody>
+
+                            </tbody>
+                           </tr>
+                        </table>
+                    </div>
+
+
+                    <div class="detail-card">
+                        <h2>Recent Bills</h2>
+                        <table>
+                            <tr>
+                                <thead>
+                                    <td></td>
+                                    <td>Name</td>
+                                    <td>Amount</td>
+                                    <td>Status</td>
+                                </thead>
+                            </tr>
+                            <tr>
+                               <tbody>
+
+                               </tbody>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+
+                <section class="quick-actions-grid">
+                    <button class="action-btn gradient-1"><i class="fas fa-user-plus"></i> Add Members</button>
+                    <button class="action-btn gradient-2"><i class="fas fa-file-invoice"></i> Create Bills</button>
+                    <button class="action-btn gradient-3"><i class="fas fa-box"></i> Assign Package</button>
+                    <button class="action-btn gradient-4"><i class="fas fa-bell"></i> Send Notification</button>
+                </section>
+            </main>
+        </div>
+    </div>
+
+   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script type="module" src="./js/admin.js"></script>
+</body>
+
+</html>

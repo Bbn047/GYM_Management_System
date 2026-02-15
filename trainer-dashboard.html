@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Dashboard - Mr. FIT</title>
+    <link rel="stylesheet" href="styles/trainer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <nav class="sidebar" id="sidebar">
+            <div class="logo">Mr. FIT</div>
+            <ul>
+                <li><a href="#" class="active" data-page="trainer-dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="#" data-page="my-trainees"><i class="fas fa-users"></i> My Trainees</a></li>
+                <li><a href="#" data-page="billing-receipts"><i class="fas fa-file-invoice"></i> View Receipts</a></li>
+                <li><a href="#" data-page="notifications"><i class="fas fa-bell"></i> Notifications</a></li>
+                <li><a href="#" data-page="diet-plans"><i class="fas fa-utensils"></i> Diet Plans</a></li>
+            </ul>
+        </nav>
+
+        <div class="main-wrapper" id="mainWrapper">
+
+            <header class="top-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+                    <div class="welcome-note">
+                        <h1>Trainer Dashboard 👋</h1>
+                        <p id="trainer-welcome-name">Loading...</p>
+                    </div>
+                </div>
+
+                <div class="trainer-profile-menu">
+                    <span class="user-name" id="trainer-profile-name">Loading...</span>
+                    <div class="dropdown">
+                        <i class="fas fa-chevron-down dropdown-icon"></i>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fas fa-user"></i> Profile</a>
+                            <a href="#" class="logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="scrollable-content" id="mainContent">
+                <section class="stats-grid">
+                    <div class="stat-card gradient-1"><i class="fas fa-users icon"></i>
+                        <div class="data">
+                            <h3>My Trainees</h3>
+                            <p class="stat-number" id="trainee-count">0</p>
+                        </div>
+                    </div>
+                    <div class="stat-card gradient-3"><i class="fas fa-file-invoice-dollar icon"></i>
+                        <div class="data">
+                            <h3>Pending Payments</h3>
+                            <p class="stat-number" id="pending-payments">0</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="details-grid">
+                    <div class="detail-card" style="flex: 1;">
+                        <h2>Recent Payment Status</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="payment-status-body">
+                                <tr><td colspan="2">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="detail-card" style="flex: 1;">
+                        <h2>Active Diet Plans</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Trainee</th>
+                                    <th>Plan</th>
+                                    <th>Goal</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="active-plans-body">
+                                <tr><td colspan="4">Loading plans...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script type="module" src="./js/trainer.js"></script>
+</body>
+</html>

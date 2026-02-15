@@ -1,66 +1,78 @@
+/* --- ROOT VARIABLES --- */
+:root {
+    --bg-main: #f4f7f6;
+    --bg-dark: #1a1a1a;
+    --bg-dark-light: #333;
+    --accent-color: #ff6600;
+    --accent-hover: #e65c00;
+    --text-white: white;
+    --text-dark: #333;
+    --text-muted: #666;
+    --card-bg: #f9f9f9;
+}
+
 /* General Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
 }
 
 /* Navbar */
 .custom-nav {
-    background-color: #1a1a1a;
+    background-color: var(--bg-dark);
     padding: 15px 50px;
 }
 
 .navbar-brand.logo {
     font-size: 28px;
     font-weight: bold;
-    color: #ff6600 !important; /* Orange accent */
+    color: var(--accent-color) !important;
     text-transform: uppercase;
 }
 
 .nav-link {
-    color: white !important;
+    color: var(--text-white) !important;
     font-weight: 500;
     margin-right: 15px;
 }
 
 .nav-link.active {
-    color: #ff6600 !important;
+    color: var(--accent-color) !important;
 }
 
 .btn-outline-primary {
-    color: white !important;
-    border-color: white !important;
+    color: var(--text-white) !important;
+    border-color: var(--text-white) !important;
 }
 
 .btn-outline-primary:hover {
-    background-color: white !important;
-    color: #1a1a1a !important;
+    background-color: var(--text-white) !important;
+    color: var(--bg-dark) !important;
 }
 
 .btn-primary {
-    background-color: #ff6600 !important;
-    border-color: #ff6600 !important;
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
 }
 
 .btn-primary:hover {
-    background-color: #e65c00 !important;
-    border-color: #e65c00 !important;
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
 }
 
 /* Hero Section */
 .hero {
-    /* To use an image, uncomment the line below and add your image path */
-    /* background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../images/gym-bg.jpg') no-repeat center center/cover; */
-    background: linear-gradient(135deg, #1a1a1a 0%, #333 100%); /* Fallback gradient */
+    /* Updated to use variables */
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-dark-light) 100%);
     height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--text-white);
     text-align: center;
     padding: 0 20px;
 }
@@ -78,8 +90,8 @@ body {
 }
 
 .btn-action {
-    background-color: #ff6600;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-white);
     padding: 15px 35px;
     text-decoration: none;
     border-radius: 30px;
@@ -89,21 +101,21 @@ body {
 }
 
 .btn-action:hover {
-    background-color: #e65c00;
-    color: white;
+    background-color: var(--accent-hover);
+    color: var(--text-white);
 }
 
 /* Features Section */
 .features {
     padding: 60px 20px;
     text-align: center;
-    background-color: white;
+    background-color: var(--text-white);
 }
 
 .features h2 {
     font-size: 36px;
     margin-bottom: 40px;
-    color: #1a1a1a;
+    color: var(--bg-dark);
 }
 
 .feature-grid {
@@ -115,7 +127,7 @@ body {
 }
 
 .feature-card {
-    background: #f9f9f9;
+    background: var(--card-bg);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
@@ -127,19 +139,19 @@ body {
 }
 
 .feature-card h3 {
-    color: #ff6600;
+    color: var(--accent-color);
     margin-bottom: 15px;
 }
 
 .feature-card p {
-    color: #666;
+    color: var(--text-muted);
     line-height: 1.6;
 }
 
 /* Footer */
 footer {
-    background-color: #1a1a1a;
-    color: white;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
     text-align: center;
     padding: 30px;
     margin-top: 40px;
